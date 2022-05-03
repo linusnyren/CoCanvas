@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex: 1 1 auto;
+
+  }
+  img {
+      background-color: #eed;
+      box-shadow: 10px -10px 5px  rgba(0,0,0,0.6);
+      -moz-box-shadow: 10px -10px 5px  rgba(0,0,0,0.6);
+      -webkit-box-shadow: 10px -10px 5px  rgba(0,0,0,0.6);
+      -o-box-shadow: 10px -10px 5px  rgba(0,0,0,0.6);
+      border-radius:25px;
+      margin:10px;
+      max-width:95%;
+      width:300px;
+      flex-basis: auto;
+  }
+button{
+    margin:10px;
+}

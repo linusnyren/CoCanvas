@@ -1,0 +1,11 @@
+<div class="container">
+    <button mat-raised-button color="primary" (click)="goToAddImages()">Add <mat-icon>add</mat-icon></button>
+</div>
+
+<div class="container">
+        <div *ngFor="let image of images">
+            <div class="image-container">
+                <img mat-card-image src={{image}}>
+            </div>
+        </div>
+</div>

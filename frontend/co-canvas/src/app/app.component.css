@@ -1,0 +1,29 @@
+.sidenav {
+    width: 215px;
+  }
+  
+  .sidenav-container {
+    height: 100%;
+  }
+  
+  .sidenav .mat-toolbar {
+    background: inherit;
+  }
+  
+  .sidenav-bottom {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  
+  .mat-expansion-panel-header {
+    padding: 0px 0px;
+  }
+  
+  .mat-expansion-panel:not([class*=mat-elevation-z]){
+    box-shadow: 0px 0px;
+  }
+  
+  
