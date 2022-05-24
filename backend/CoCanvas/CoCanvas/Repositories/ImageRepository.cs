@@ -17,7 +17,6 @@ namespace CoCanvas.Repositories
         {
             BlobServiceClient blobServiceClient = new BlobServiceClient(options.Value.ConnectionString);
             this.containerClient = blobServiceClient.GetBlobContainerClient(options.Value.Container);
-            containerClient.CreateIfNotExistsAsync().Wait();
         }
 
         public async Task<IEnumerable<Image>> GetUrls()

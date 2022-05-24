@@ -3,28 +3,26 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 import Image from '../models/image';
-import { ImageStoreService } from '../state/image-store';
 
 @Injectable()
 export class ImageDataService {
+    private baseUrl: string = 'https://localhost:5000/image'
 
-  constructor(private httpClient: HttpClient, private imageStore: ImageStoreService) { }
+  constructor(private httpClient: HttpClient) { }
 
   list(): Observable<Image[]> {
-    const url = `https://localhost:5004/image`;
 
-    return this.httpClient.get<Image[]>(url)
+    return this.httpClient.get<Image[]>(this.baseUrl)
       .pipe(
         map(value => value)
       );
   }
 
   add(image: File): Observable<Image> {
-    const url = `https://localhost:5004/image`;
     const formData = new FormData();
     const fileToUpload = image
     formData.append('imageData', fileToUpload, fileToUpload.name);
     formData.append('name', image.name);
-    return this.httpClient.post<Image>(url, formData);
+    return this.httpClient.post<Image>(this.baseUrl, formData);
   }
 }
