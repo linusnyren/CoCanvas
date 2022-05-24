@@ -11,6 +11,11 @@ img {
     -moz-box-shadow: 10px -10px 5px  rgba(0,0,0,0.6);
     -webkit-box-shadow: 10px -10px 5px  rgba(0,0,0,0.6);
     -o-box-shadow: 10px -10px 5px  rgba(0,0,0,0.6);
-    border-radius:25px;
     margin:10px;
+    width: 390px;
+    max-width: 90%;
+}
+
+button{
+  margin:20px;
 }

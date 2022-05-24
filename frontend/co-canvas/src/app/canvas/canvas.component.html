@@ -3,9 +3,9 @@
 </div>
 
 <div class="container">
-        <div *ngFor="let image of images">
+        <div *ngFor="let image of images$ | async">
             <div class="image-container">
-                <img mat-card-image src={{image}}>
+                <img mat-card-image src={{image.url}}>
             </div>
         </div>
 </div>
