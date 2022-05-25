@@ -39,4 +39,8 @@ export class ImageService {
       this.imageStore.setLoading(false);
     });
   }
+
+  setLoading(loading: boolean): void{
+    this.imageStore.setLoading(loading);
+  }
 }

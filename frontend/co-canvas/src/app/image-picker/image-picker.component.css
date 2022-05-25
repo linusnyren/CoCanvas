@@ -19,6 +19,9 @@
       width:300px;
       flex-basis: auto;
   }
+  .spinner {
+      margin:50px;
+  }
 button{
     margin:10px;
 }

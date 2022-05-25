@@ -2,7 +2,10 @@
     <button mat-raised-button color="primary" (click)="goToAddImages()">Add <mat-icon>add</mat-icon></button>
 </div>
 
+
 <div class="container">
+<mat-spinner class="spinner" *ngIf="isLoading$ | async"></mat-spinner>
+
         <div *ngFor="let image of images$ | async">
             <div class="image-container">
                 <img mat-card-image src={{image.url}}>

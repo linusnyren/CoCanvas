@@ -15,7 +15,9 @@ img {
     width: 390px;
     max-width: 90%;
 }
-
+.spinner {
+  margin:50px;
+}
 button{
   margin:20px;
 }

@@ -1,12 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 import Image from '../models/image';
 
 @Injectable()
 export class ImageDataService {
-    private baseUrl: string = 'https://localhost:5000/image'
+    private baseUrl: string = 'http://linusnyren.ddns.net:5000/image'
 
   constructor(private httpClient: HttpClient) { }
 

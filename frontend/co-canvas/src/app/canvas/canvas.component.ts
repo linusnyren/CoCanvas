@@ -12,8 +12,11 @@ import Image from '../models/image';
 export class CanvasComponent implements OnInit {
 
   images$: Observable<Image[]>;
+  isLoading$: Observable<boolean>;
+  
   constructor(private router: Router, private imageService: ImageService) {
     this.images$ = this.imageService.images$();
+    this.isLoading$ = this.imageService.isLoading$();
   }
 
   ngOnInit(): void {
