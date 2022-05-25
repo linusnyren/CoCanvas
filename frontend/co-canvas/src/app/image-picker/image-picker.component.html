@@ -1,7 +1,7 @@
   <div class="container">
         <div (click)="uploadFile.click()">
             <button mat-raised-button color="primary">Select Images</button>
-            <input #uploadFile multiple (change)="selectFiles($event)" type='file' style="display:none"/> 
+            <input #uploadFile multiple (change)="selectFiles($event)" accept="image/* .heic" type='file' style="display:none"/> 
          </div>
     <div>
       <button

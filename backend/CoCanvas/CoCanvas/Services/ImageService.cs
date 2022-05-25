@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using CoCanvas.Interfaces;
 using CoCanvas.Models;
@@ -27,7 +28,8 @@ namespace CoCanvas.Services
 
         public async Task<IEnumerable<Image>> GetUrls()
         {
-            return await imageRepository.GetUrls();
+            var urls = await imageRepository.GetUrls();
+            return urls.OrderBy(x => x.CreatedOn).Reverse();
         }
     }
 }

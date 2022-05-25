@@ -29,8 +29,7 @@ namespace CoCanvas.Repositories
             {
                 //here you can concatenate the container url with blob name
                 string blob_url = container_url + "/" + item.Name;
-
-                res.Add(new Image { Url = blob_url });
+                res.Add(new Image { Url = blob_url, CreatedOn = item.Properties.CreatedOn});
             }
             return res;
         }
